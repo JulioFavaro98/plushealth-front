@@ -12,11 +12,10 @@ img {
     width: 50%;
     height: 7rem;
     margin: .8rem auto 1rem auto;
-    opacity: 70%;
 }
 
 .sidenav a {
-    color: rgb(39, 39, 39);
+    color: black;
 }
 
 .sidenav i {
@@ -25,6 +24,6 @@ img {
 
 .menu {
     margin: 1rem 0 0 1rem;
-    color: rgb(39, 39, 39);
+    color: black;
     background: linear-gradient(90deg, rgba(24,121,89,1) 5%, rgba(0,255,209,1) 64%);
 }

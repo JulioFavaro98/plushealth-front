@@ -13,6 +13,7 @@
     width: 70%;
     margin: auto;
     background: linear-gradient(90deg, rgba(24,121,89,1) 5%, rgba(0,255,209,1) 64%);
+    box-shadow: 5px 10px 8px;
 }
 
 img {
