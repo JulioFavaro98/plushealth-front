@@ -1,0 +1,21 @@
+* {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 10px;   
+    width: 70%;
+    margin: auto;
+    background: linear-gradient(90deg, rgba(24,121,89,1) 5%, rgba(0,255,209,1) 64%);
+}
+
+img {
+    width: 20%;
+    margin: 50px;
+}
