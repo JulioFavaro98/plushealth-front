@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Roboto:wght@300;400;700&display=swap');
+
+.container {
+    height: 100%;
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 30rem;
+    margin: auto;
+    background: transparent;
+    box-shadow: 0 8px 32px 0 rgba(0,255,209,1);
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    padding: 4rem 1rem;
+    border-radius: 1rem;
+}
+
+h1 {
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(1, 155, 127);
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(1, 155, 127);
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+button {
+    margin-top: 1.5rem;
+}
+
+
