@@ -3,6 +3,26 @@
     margin: auto;
 }
 
+.container-filter {
+    display: flex;
+    justify-content: space-between;
+}
+
 table {
     width: 100%;
+}
+
+mat-form-field {
+    width: 20%;
+}
+
+button {
+    width: 120px;
+    height: 35px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
 }
