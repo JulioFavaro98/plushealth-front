@@ -16,3 +16,7 @@ h1 {
 button {
     margin-top: 10px;
 }
+
+mat-icon {
+    opacity: .8;
+}
