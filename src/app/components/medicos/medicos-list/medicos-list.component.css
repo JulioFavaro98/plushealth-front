@@ -26,3 +26,21 @@ h1 {
     text-align: center;
     font-weight: bolder;
 }
+
+.edit {
+    color: rgb(196, 196, 196);
+    margin-right: 5px;
+}
+
+.edit:hover {
+    color: rgb(2, 206, 145);
+}
+
+.delete {
+    color: rgb(196, 196, 196);
+    margin-left: 5px;
+}
+
+.delete:hover {
+    color: rgb(150, 1, 1);
+}
