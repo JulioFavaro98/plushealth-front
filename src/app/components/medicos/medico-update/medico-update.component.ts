@@ -1,17 +1,17 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import Inputmask from 'inputmask';
 import { ToastrService } from 'ngx-toastr';
 import { Medico } from 'src/app/models/medico';
 import { MedicosService } from 'src/app/services/medicos.service';
 
 @Component({
-  selector: 'app-medico-create',
-  templateUrl: './medico-create.component.html',
-  styleUrls: ['./medico-create.component.css']
+  selector: 'app-medico-update',
+  templateUrl: './medico-update.component.html',
+  styleUrls: ['./medico-update.component.css']
 })
-export class MedicoCreateComponent implements OnInit {
+export class MedicoUpdateComponent implements OnInit {
 
   medico: Medico = {
     id: '',
@@ -33,14 +33,24 @@ export class MedicoCreateComponent implements OnInit {
     private elementRef: ElementRef,
     private service: MedicosService,
     private toast: ToastrService,
-    private router: Router) { }
+    private router: Router,
+    private route: ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
+    this.medico.id = this.route.snapshot.paramMap.get('id');
+    this.findById();
   }
 
-  create(): void {
-      this.service.create(this.medico).subscribe(() => {
-        this.toast.success('Médico cadastrado com sucesso!', 'Cadastro');
+  findById(): void {
+    this.service.findById(this.medico.id).subscribe(resposta => {
+      this.medico = resposta;
+    });
+  }
+
+  update(): void {
+      this.service.update(this.medico).subscribe(() => {
+        this.toast.success('Médico atualizado com sucesso!', 'Update');
         this.router.navigate(['medicos'])
       }, ex => {
         if(ex.error.errors) {
@@ -64,5 +74,6 @@ export class MedicoCreateComponent implements OnInit {
   }
 
   
+
 
 }

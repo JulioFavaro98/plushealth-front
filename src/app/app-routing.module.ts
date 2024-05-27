@@ -6,6 +6,7 @@ import { MedicosListComponent } from './components/medicos/medicos-list/medicos-
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { MedicoCreateComponent } from './components/medicos/medico-create/medico-create.component';
+import { MedicoUpdateComponent } from './components/medicos/medico-update/medico-update.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent},
 
     { path: 'medicos', component: MedicosListComponent},
-    { path: 'medicos/create', component: MedicoCreateComponent}
+    { path: 'medicos/create', component: MedicoCreateComponent},
+    { path: 'medicos/update/:id', component: MedicoUpdateComponent}
   ]}
 ];
 
