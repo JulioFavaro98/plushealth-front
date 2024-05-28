@@ -37,6 +37,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { MedicoCreateComponent } from './components/medicos/medico-create/medico-create.component';
 import { MedicoUpdateComponent } from './components/medicos/medico-update/medico-update.component';
+import { MedicoDeleteComponent } from './components/medicos/medico-delete/medico-delete.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { MedicoUpdateComponent } from './components/medicos/medico-update/medico
     MedicosListComponent,
     LoginComponent,
     MedicoCreateComponent,
-    MedicoUpdateComponent
+    MedicoUpdateComponent,
+    MedicoDeleteComponent
   ],
   imports: [
     BrowserModule,
