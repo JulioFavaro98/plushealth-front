@@ -8,6 +8,10 @@ import { AuthGuard } from './auth/auth.guard';
 import { MedicoCreateComponent } from './components/medicos/medico-create/medico-create.component';
 import { MedicoUpdateComponent } from './components/medicos/medico-update/medico-update.component';
 import { MedicoDeleteComponent } from './components/medicos/medico-delete/medico-delete.component';
+import { PacientesListComponent } from './components/pacientes/pacientes-list/pacientes-list.component';
+import { PacienteCreateComponent } from './components/pacientes/paciente-create/paciente-create.component';
+import { PacienteUpdateComponent } from './components/pacientes/paciente-update/paciente-update.component';
+import { PacienteDeleteComponent } from './components/pacientes/paciente-delete/paciente-delete.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -17,7 +21,12 @@ const routes: Routes = [
     { path: 'medicos', component: MedicosListComponent},
     { path: 'medicos/create', component: MedicoCreateComponent},
     { path: 'medicos/update/:id', component: MedicoUpdateComponent},
-    { path: 'medicos/delete/:id', component: MedicoDeleteComponent}
+    { path: 'medicos/delete/:id', component: MedicoDeleteComponent},
+
+    { path: 'pacientes', component: PacientesListComponent},
+    { path: 'pacientes/create', component: PacienteCreateComponent},
+    { path: 'pacientes/update/:id', component: PacienteUpdateComponent},
+    { path: 'pacientes/delete/:id', component: PacienteDeleteComponent}
   ]}
 ];
 

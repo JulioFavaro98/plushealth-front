@@ -38,6 +38,10 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { MedicoCreateComponent } from './components/medicos/medico-create/medico-create.component';
 import { MedicoUpdateComponent } from './components/medicos/medico-update/medico-update.component';
 import { MedicoDeleteComponent } from './components/medicos/medico-delete/medico-delete.component';
+import { PacienteDeleteComponent } from './components/pacientes/paciente-delete/paciente-delete.component';
+import { PacienteUpdateComponent } from './components/pacientes/paciente-update/paciente-update.component';
+import { PacienteCreateComponent } from './components/pacientes/paciente-create/paciente-create.component';
+import { PacientesListComponent } from './components/pacientes/pacientes-list/pacientes-list.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +53,11 @@ import { MedicoDeleteComponent } from './components/medicos/medico-delete/medico
     LoginComponent,
     MedicoCreateComponent,
     MedicoUpdateComponent,
-    MedicoDeleteComponent
+    MedicoDeleteComponent,
+    PacientesListComponent,
+    PacienteCreateComponent,
+    PacienteUpdateComponent,
+    PacienteDeleteComponent
   ],
   imports: [
     BrowserModule,
