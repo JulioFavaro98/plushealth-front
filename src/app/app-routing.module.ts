@@ -12,21 +12,24 @@ import { PacientesListComponent } from './components/pacientes/pacientes-list/pa
 import { PacienteCreateComponent } from './components/pacientes/paciente-create/paciente-create.component';
 import { PacienteUpdateComponent } from './components/pacientes/paciente-update/paciente-update.component';
 import { PacienteDeleteComponent } from './components/pacientes/paciente-delete/paciente-delete.component';
+import { ConsultasListComponent } from './components/consultas/consultas-list/consultas-list.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', component: NavComponent, canActivate: [AuthGuard], children: [
     { path: 'home', component: HomeComponent},
 
-    { path: 'medicos', component: MedicosListComponent},
-    { path: 'medicos/create', component: MedicoCreateComponent},
-    { path: 'medicos/update/:id', component: MedicoUpdateComponent},
-    { path: 'medicos/delete/:id', component: MedicoDeleteComponent},
+    { path: 'medicos',              component: MedicosListComponent},
+    { path: 'medicos/create',       component: MedicoCreateComponent},
+    { path: 'medicos/update/:id',   component: MedicoUpdateComponent},
+    { path: 'medicos/delete/:id',   component: MedicoDeleteComponent},
 
-    { path: 'pacientes', component: PacientesListComponent},
-    { path: 'pacientes/create', component: PacienteCreateComponent},
+    { path: 'pacientes',            component: PacientesListComponent},
+    { path: 'pacientes/create',     component: PacienteCreateComponent},
     { path: 'pacientes/update/:id', component: PacienteUpdateComponent},
-    { path: 'pacientes/delete/:id', component: PacienteDeleteComponent}
+    { path: 'pacientes/delete/:id', component: PacienteDeleteComponent},
+
+    {path: 'consultas',             component: ConsultasListComponent}
   ]}
 ];
 
