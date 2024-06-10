@@ -1,0 +1,52 @@
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.container-filter {
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    width: 100%;
+}
+
+mat-form-field {
+    width: 20%;
+}
+
+button {
+    width: 120px;
+    height: 35px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.edit {
+    color: rgb(196, 196, 196);
+    margin-right: 5px;
+}
+
+.edit:hover {
+    color: rgb(2, 206, 145);
+}
+
+.delete {
+    color: rgb(196, 196, 196);
+    margin-left: 5px;
+}
+
+.delete:hover {
+    color: rgb(150, 1, 1);
+}
+
+mat-radio-group {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
