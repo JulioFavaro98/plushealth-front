@@ -13,6 +13,7 @@ import { PacienteCreateComponent } from './components/pacientes/paciente-create/
 import { PacienteUpdateComponent } from './components/pacientes/paciente-update/paciente-update.component';
 import { PacienteDeleteComponent } from './components/pacientes/paciente-delete/paciente-delete.component';
 import { ConsultasListComponent } from './components/consultas/consultas-list/consultas-list.component';
+import { ConsultaCreateComponent } from './components/consultas/consulta-create/consulta-create.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -29,7 +30,8 @@ const routes: Routes = [
     { path: 'pacientes/update/:id', component: PacienteUpdateComponent},
     { path: 'pacientes/delete/:id', component: PacienteDeleteComponent},
 
-    {path: 'consultas',             component: ConsultasListComponent}
+    {path: 'consultas',             component: ConsultasListComponent},
+    {path: 'consultas/create',      component: ConsultaCreateComponent}
   ]}
 ];
 

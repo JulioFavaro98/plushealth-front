@@ -7,7 +7,7 @@
         <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
       </mat-form-field>
   
-      <button mat-stroked-button color="primary">Nova Consulta</button>
+      <button mat-stroked-button routerLink="create" color="primary">Nova Consulta</button>
     </div>
     <mat-radio-group color="primary">
         <mat-radio-button (click)="orderByStatus(0)" value="0">Em aberto</mat-radio-button>
