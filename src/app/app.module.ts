@@ -44,6 +44,7 @@ import { PacienteCreateComponent } from './components/pacientes/paciente-create/
 import { PacientesListComponent } from './components/pacientes/pacientes-list/pacientes-list.component';
 import { ConsultasListComponent } from './components/consultas/consultas-list/consultas-list.component';
 import { ConsultaCreateComponent } from './components/consultas/consulta-create/consulta-create.component';
+import { ConsultaUpdateComponent } from './components/consultas/consulta-update/consulta-update.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ConsultaCreateComponent } from './components/consultas/consulta-create/
     PacienteUpdateComponent,
     PacienteDeleteComponent,
     ConsultasListComponent,
-    ConsultaCreateComponent
+    ConsultaCreateComponent,
+    ConsultaUpdateComponent
   ],
   imports: [
     BrowserModule,
