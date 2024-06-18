@@ -36,15 +36,6 @@ h1 {
     color: rgb(2, 206, 145);
 }
 
-.delete {
-    color: rgb(196, 196, 196);
-    margin-left: 5px;
-}
-
-.delete:hover {
-    color: rgb(150, 1, 1);
-}
-
 mat-radio-group {
     display: flex;
     justify-content: space-around;
