@@ -15,6 +15,7 @@ import { PacienteDeleteComponent } from './components/pacientes/paciente-delete/
 import { ConsultasListComponent } from './components/consultas/consultas-list/consultas-list.component';
 import { ConsultaCreateComponent } from './components/consultas/consulta-create/consulta-create.component';
 import { ConsultaUpdateComponent } from './components/consultas/consulta-update/consulta-update.component';
+import { ConsultaReadComponent } from './components/consultas/consulta-read/consulta-read.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -33,7 +34,8 @@ const routes: Routes = [
 
     {path: 'consultas',             component: ConsultasListComponent},
     {path: 'consultas/create',      component: ConsultaCreateComponent},
-    {path: 'consultas/update/:id', component: ConsultaUpdateComponent}
+    {path: 'consultas/update/:id', component: ConsultaUpdateComponent},
+    {path: 'consultas/read/:id', component: ConsultaReadComponent}
   ]}
 ];
 
