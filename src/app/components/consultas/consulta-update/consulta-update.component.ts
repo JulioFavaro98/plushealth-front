@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Consulta } from 'src/app/models/consulta';
 import { Medico } from 'src/app/models/medico';
@@ -40,19 +40,38 @@ export class ConsultaUpdateComponent implements OnInit {
     private medicoService: MedicosService,
     private pacienteService: PacientesService,
     private toastService: ToastrService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+    this.consulta.id = this.route.snapshot.paramMap.get('id');
+    this.findById();
     this.findAllPacientes();
     this.findAllMedicos();
   }
 
-  create(): void {
+  findById(): void {
+    this.consultaService.findById(this.consulta.id).subscribe(resposta => {
+      this.consulta = resposta;
+
+      this.consulta.dataConsulta = this.convertDateForInput(this.consulta.dataConsulta);
+      this.dataConsulta.setValue(this.consulta.dataConsulta);
+      this.horaConsulta.setValue(this.consulta.horaConsulta);
+      this.statusConsulta.setValue(this.consulta.statusConsulta.toString());
+      this.medico.setValue(this.consulta.medico);
+      this.paciente.setValue(this.consulta.paciente);
+
+    }, ex => {
+      this.toastService.error(ex.error.error);
+    })
+  }
+
+  update(): void {
     this.consulta.dataConsulta = this.formatDate(this.consulta.dataConsulta);
 
-    this.consultaService.create(this.consulta).subscribe(resposta => {
-      this.toastService.success('Consulta agendada com sucesso!', 'Nova Consulta');
+    this.consultaService.update(this.consulta).subscribe(resposta => {
+      this.toastService.success('Consulta atualizada com sucesso!', 'Atualizar Consulta');
       this.router.navigate(['consultas']);
     }, ex => {
       this.toastService.error(ex.error.error);
@@ -71,6 +90,11 @@ export class ConsultaUpdateComponent implements OnInit {
       this.medicos = resposta;
       this.medicos.sort((a, b) => a.nome.localeCompare(b.nome));
     })
+  }
+
+  convertDateForInput(date: string): string {
+    const [day, month, year] = date.split('/');
+    return `${year}-${month}-${day}`;
   }
 
   formatDate(date: string): string {
