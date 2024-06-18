@@ -1,0 +1,31 @@
+.container {
+    width: 25rem;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.form {
+    margin-top: 3rem;
+}
+
+.data-hora {
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-hora mat-form-field {
+    width: 49%;
+}
+
+button {
+    margin-top: 10px;
+}
+
+h1 {
+    text-align: center;
+}
