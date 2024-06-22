@@ -16,6 +16,7 @@ import { ConsultasListComponent } from './components/consultas/consultas-list/co
 import { ConsultaCreateComponent } from './components/consultas/consulta-create/consulta-create.component';
 import { ConsultaUpdateComponent } from './components/consultas/consulta-update/consulta-update.component';
 import { ConsultaReadComponent } from './components/consultas/consulta-read/consulta-read.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -35,7 +36,9 @@ const routes: Routes = [
     {path: 'consultas',             component: ConsultasListComponent},
     {path: 'consultas/create',      component: ConsultaCreateComponent},
     {path: 'consultas/update/:id', component: ConsultaUpdateComponent},
-    {path: 'consultas/read/:id', component: ConsultaReadComponent}
+    {path: 'consultas/read/:id', component: ConsultaReadComponent},
+
+    {path: 'new-password', component: UsuarioComponent}
   ]}
 ];
 

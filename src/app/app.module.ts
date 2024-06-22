@@ -46,6 +46,7 @@ import { ConsultasListComponent } from './components/consultas/consultas-list/co
 import { ConsultaCreateComponent } from './components/consultas/consulta-create/consulta-create.component';
 import { ConsultaUpdateComponent } from './components/consultas/consulta-update/consulta-update.component';
 import { ConsultaReadComponent } from './components/consultas/consulta-read/consulta-read.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { ConsultaReadComponent } from './components/consultas/consulta-read/cons
     ConsultasListComponent,
     ConsultaCreateComponent,
     ConsultaUpdateComponent,
-    ConsultaReadComponent
+    ConsultaReadComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
